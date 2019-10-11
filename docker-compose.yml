@@ -6,11 +6,11 @@ services:
     container_name: tut-node
     build: ./backend
     ports:
-      - 3000:3000
+      - 4000:4000
     environment:
       - NODE_ENV=local
       - ES_HOST=elasticsearch
-      - NODE_PORT=3000
+      - NODE_PORT=4000
       - ELASTIC_URL=http://elasticsearch:9200
     volumes:
       - ./backend:/usr/src/app/quotes

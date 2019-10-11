@@ -5,11 +5,11 @@ const routes = require("./routes");
 require("dotenv").config();
 
 const app = express();
-const port = process.env.NODE_PORT || 3000;
+const port = process.env.NODE_PORT || 4000;
 
 function start() {
   return app
-    .use(cors())
+    .use(cors({ origin: "http://localhost:3000" }))
     .use(bodyParser.urlencoded({ extended: false }))
     .use(bodyParser.json())
     .use("/quotes", routes)
